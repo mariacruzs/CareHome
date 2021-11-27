@@ -1,0 +1,378 @@
+
+body{
+    background-color: #e6e6e6;
+}
+
+/* logo*/
+.logo{
+    width: 100%;
+    margin-top: -26%;
+    margin-left: -38%;
+}
+
+/*menu */
+.site-header {
+    background-color: #001133;
+    height: 13%;
+
+}
+
+/*posicionamento letra do menu */
+.site-header a {
+    color: #e6e6e6;
+    width: 175%;
+    font-size: 110%;
+    padding-top: 2.5%;
+    transition: ease-in-out color .5s;
+}
+
+/* cor de quando passa o mouse no menu*/
+.site-header a:hover {
+    color: #e62e00;
+    text-decoration: none;
+}
+
+/* Rodapé*/
+.rodape{
+    color: #e6e6e6;
+    font-size: 88%;
+    font-family: arial;
+    text-decoration: none;
+}
+
+/* estrutura do rodapé*/
+footer{
+    background-color: #001133;
+    margin-top: 8%;
+}
+
+/* fundo da parte do meio (seja um voluntario etc) */
+#meio{
+    margin-bottom: -60%;
+    padding: 100%;
+
+}
+
+/* cor do título do rodapé*/
+.tfooter{
+    color: #e6e6e6;
+}
+
+.tfooter2 {
+    color: #001133;
+}
+
+/* informações no meio da página*/
+.chamada{
+    text-indent: 25pt;
+    text-align: left;
+    font-size: 10pt;
+    margin-top: -25px;
+}
+
+/* imagem meio da pagina*/
+.chamadaIMG{
+    width: 220px;
+    height: 220px;
+}
+
+/* alinhamento texto de informações home*/
+.thumbnail{
+    text-align: center;
+    padding: 10px;
+    height: 500px;
+}
+
+/* botão leia mais */
+.chamadaBtn{
+    background-color: #001133;
+    right: 95px;
+    bottom: 25px;
+    margin-bottom: 20px;
+
+}
+
+/* separação entre as informações do meio */
+.vertical{
+    position: absolute;
+    width: 3px;
+    left: 0px;
+    top: 15px;
+}
+
+/*margem */
+.margem{
+    background-color: black;
+    margin-top: 60px;   
+    margin-bottom: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 1.2em;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.8);
+}
+
+.margem2{
+    /*background-color: #f8f27c;*/
+    margin-top: 60px;   
+    margin-bottom: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 1.2em;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.8);
+}
+
+.icone {
+    color: #e62e00;
+    font-size: 2em;
+    margin: 0 5px;
+}
+
+/* reset de margens */
+* {
+    margin: 0;
+    padding:0;
+}
+
+/* para garantir que estes elementos ocuparão toda a tela */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+#fundo-externo {
+    overflow: hidden; /* para que não tenha rolagem se a imagem de fundo for maior que a tela */
+    width: 100%;
+    height: 100%;
+    position: relative; /* criamos um contexto para posicionamento */
+}
+
+#fundo {
+    position: fixed; /* posição fixa para que a possível rolagem da tela não revele espaços em branco */
+    width: 100%;
+    height: 100%;
+}
+
+#fundo img {
+    width: 100%; /* com isso imagem ocupará toda a largura da tela. Se colocarmos height: 100% também, a imagem irá distorcer */
+    position: absolute;
+}
+
+#site {
+    border-radius: 15px;
+    position: absolute;
+    top: 100px;
+    left: 76%;
+    width: 560px;
+    padding: 30px;
+    margin-left: -300px; /* por causa do posicionamento absoluto temos que usar margem negativa para centralizar o site */
+    background: #fff; /* fundo branco para navegadores que não suportam rgba */
+    background: rgba(255,255,255,0.8); /* fundo branco com um pouco de transparência */
+}
+
+p {
+    margin-bottom: 1.2em;
+}
+
+/*fundo voluntário*/
+.fundovoluntario {
+    margin-top: 0px;
+    background-size: 1400px 920px;
+    background-image: url('../img/maoscasal.jpg');
+}
+
+.imgfundo2 {
+    /*background-size: 1400px 900px;
+     margin-bottom: -80px;*/
+    background-image: url('../img/velhamascara.jpg')
+}
+
+.site-header2 {
+    background-color: #001133;
+    height: 13%;
+}
+
+.container {
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.fundo {
+    background-size: 1200px 1000px;
+    background-image: url('../img/');
+}
+
+.texto {
+    font-family: verdana;
+    margin-bottom: 12px;
+    text-indent: 50pt;
+    text-align: justify;
+    font-size: 10pt;
+}
+
+/*saude*/
+.chamada_saude {
+    margin-top:20px;
+    margin-bottom:25px;
+    margin-left: 145px;
+    width:80%;
+    margin-right: 0%;
+}
+
+.img_saude {
+    background-image: url('../img/velhinhascaminhando.jpg');
+    background-size: 1400px 800px;
+}
+
+.chamadaIMG2 {
+    height: 100px;
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+
+.chamada2 {
+
+    text-indent: 0pt;
+    text-align: center;
+}
+
+.fundohome {
+    position: static;
+    margin-top: 0%;
+    background-size: 1400px 900px;
+    background-image: url('../img/maos.jpg');
+}
+
+.fotohome {
+
+    max-width: 1800px;
+    margin-top: -64px;
+    margin-left: -81px;
+    position: -webkit-sticky;
+    top: 20px;
+}
+
+.fundosobre {
+    background-image: url('../img/sentada.jpg');
+    background-size: 1350px 900px;
+}
+
+.btn {
+    margin-left: 400px;
+    background-color: #001133;
+}
+
+#voltar {
+    margin-left: 17px;
+    margin-bottom: -37px;
+}
+
+.fundofale {
+    background-image: url('../img/velhaszap.jpg');
+    background-size: 1350px 900px;
+}
+
+.chamadaIMG3 {
+    width: 290px;
+    height: 220px;
+}
+
+.col-md-3 {
+    margin-left: 65px;
+}
+
+.nav-item {
+    bottom: -38%;
+}
+
+.containerc {
+    background-color: black;
+    margin-top: 60px;   
+    margin-bottom: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 1.2em;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.8);
+}    
+
+.fundologin{
+    background-image: url('../img/caminhar.jpg');
+    background-size: 1350px 900px;
+}
+
+/*login funcionario*/
+#template-bg-3 {
+    background-image: url('../../images/template-bg-3.jpg');
+}
+
+.formlogin{
+    border-radius: 15px;
+    background: rgba(255,255,255,0.8); /* fundo branco com um pouco de transparência */
+}
+
+.btnprimary{
+    left: 200px;
+}
+
+.bg-image {
+    background-image: url('../../.jpg');
+}
+
+.card-header{
+    background-color: #001133;
+}
+
+/*menu lateral
+.vertical-menu {
+    color: #000;
+    font: 12px Verdana, sans-serif;
+}
+*/
+
+#conteudo {
+    width: 70%;
+    float: right;
+    text-align: center;
+}
+
+#menu {
+    border-radius: 15px;
+    width: 15%;
+    margin: 0; padding: 0;
+    float: left;
+}
+
+#menu ul li {
+    
+    border-radius: 15px;
+    margin: 0; padding: 0px;
+    border-bottom: 1px solid #CCC;
+    text-align: left;
+    list-style-type: none;
+}
+
+#menu a:link {
+    border-radius: 15px;
+    background: #F5F5F5;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+}
+
+#menu a:hover {
+    background: #E5F0FF;
+    color: #039;
+}
+
+.vertical-menu a.active {
+    background-color: #04AA6D; /* Adicione uma cor verde ao link "ativo / atual" */
+    color: white;
+}
