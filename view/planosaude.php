@@ -41,17 +41,62 @@ include_once '../dao/PlanoSaudeDAO.php';
         </nav>
 
         <div id="site">
+            <?php
+            $id_ps = null;
+            $des_ps = null;
+            if (isset($_GET["id_plano"])) {
+                $id_ps = filter_input(INPUT_GET, 'id_plano', FILTER_SANITIZE_NUMBER_INT);
+                $resultado1 = consulta_plano("des_ps", " where id_ps = " . $id_ps);
+                $des_ps = $resultado1[0]["des_ps"];
+            }
+            ?>
             <form method="POST" action="../controller/PlanoSaudeCTR.php">
                 <h4 class="text-center">Cadastro do Plano de Saúde</h4>
                 <br>
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="inputDes_ps">Descrição do Plano de Saúde:</label>
-                        <input type="text" name="des_ps" class="form-control" id="des_ps" required>
+                        <input type="text" name="des_ps" class="form-control" id="des_ps" required value="<?= $des_ps ?>">
+                        <input type="hidden" name="id_ps" value="<?= $id_ps ?>">
                     </div>
                     <button type="submit" class="btn btn-primary" name="cadastrar_plano" id="cadastrar_plano">Cadastrar</button>
                 </div>
             </form>
+
+            <table>
+                <thead>                    
+                    <tr>
+                        <th>ID_PS</th>
+                        <th>DES_PS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $resultado = consulta_plano();
+                    //   var_dump($resultado);
+                    foreach ($resultado as $linha) {
+                        ?>
+                        <tr>
+                            <td><?= $linha['id_ps'] ?></td>
+                            <td><?= $linha['des_ps'] ?></td>
+                            <td>
+                                <a href="home.php?id_plano=<?= $linha['id_ps'] ?>">Medicar</a>
+                            </td>
+                            <td>
+                                <a href="planosaude.php?id_plano=<?= $linha['id_ps'] ?>">Alterar</a>
+                            </td>
+                            <td>
+                                <a href="../controller/PlanoSaudeCTR.php?id_plano=<?= $linha['id_ps'] ?>">Excluir</a>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+
+                </tbody>
+            </table>
+
+
         </div>
 
     </body>

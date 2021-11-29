@@ -3,6 +3,7 @@ session_start();
 include_once '../config/cabecalho.php';
 include_once '../config/bdconfig.php';
 include_once '../dao/HospedeDAO.php';
+include_once '../dao/PlanoSaudeDAO.php';
 ?>
 
 <html>
@@ -16,7 +17,7 @@ include_once '../dao/HospedeDAO.php';
     </head>
 
     <body class="imgfundo2">
-        
+
         <nav class="site-header">
             <div class="container">
                 <div class="row">
@@ -179,14 +180,15 @@ include_once '../dao/HospedeDAO.php';
                             </div>
                             <div class="form-group">
                                 <label for="inputTipo_PlanoSaude">Insira o Plano de Saúde?</label>
-                                <select id="id_ps">
+                                <select id="id_ps" class="form-control">
                                     <?php
-                                    $i = 1;
-                                    while ($i <= 10) {
+                                    $resultado = consulta_plano();
+                                    //   var_dump($resultado);
+                                    foreach ($resultado as $linha) {
                                         ?>
-                                        <option value="<?php echo $i ?>" class="form-control" id="des_ps" selected > <?php echo $i ?> </option>
+                                        <option value="<?= $linha['id_ps'] ?>" class="form-control" id="des_ps" selected > <?= $linha['des_ps'] ?> </option>
                                         <?php
-                                        $i++;    
+                                        $i++;
                                     }
                                     ?>
                                 </select>
@@ -246,6 +248,6 @@ include_once '../dao/HospedeDAO.php';
 
             });
         </script>
-   
+
     </body>
 </html>

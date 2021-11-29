@@ -40,7 +40,7 @@
                     <a class="col-md-3" href="faleconosco.php"><i class="fas fa-question-circle"></i> Fale conosco</a>
                 </div>
         </nav>
-        
+
         <form action="faleconosco.php" method="POST">
             <fieldset>
                 <div class="margem">
@@ -69,16 +69,23 @@
         <footer>
             <div class="row">
                 <div class="col-md-2"> </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <h5 class="tfooter"></h5>
                     <ul class="rodape"> <!--list-unstyled (dentro da class)-->
                         <h6 class="tfooter"> <b> MAPA DO SITE </b> </h6>
-                        <li><a class="rodape " href="home.php">Tela inicial</a></li>
-                        <li><a class="rodape " href="sobrenos.php">Sobre nós</a></li>
-                        <li><a class="rodape " href="saude.php">Saúde e bem-estar</a></li>
-                        <li><a class="rodape " href="voluntario.php">Seja um voluntário!</a></li>
-                        <li><a class="rodape " href="cadastro.php">Cadastro do Hóspede</a></li>
-                        <li><a class="rodape " href="loginfuncionario.php">Login do Funcionário</a></li>
+                        <li><a class="rodape" href="home.php">Tela inicial</a></li>
+                        <li><a class="rodape" href="sobrenos.php">Sobre nós</a></li>
+                        <li><a class="rodape" href="saude.php">Saúde e bem-estar</a></li>
+                        <li><a class="rodape" href="voluntario.php">Seja um voluntário!</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="tfooter"></h5>
+                    <ul class="rodape">
+                        <h6 class="tfooter2"> <b> MAPA DO SITE </b> </h6>
+                        <li><a class="rodape" href="cadastro.php">Cadastro do Hóspede</a></li>
+                        <li><a class="rodape" href="loginfuncionario.php">Login do Funcionário</a></li>
+                        <li><a class="rodape" href="faleconosco.php">Fale conosco</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3" align="center">
@@ -90,6 +97,6 @@
                 </div> 
             </div>
         </footer>
-    
+
     </body>
 </html>

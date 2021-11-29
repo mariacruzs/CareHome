@@ -50,6 +50,10 @@ include_once '../dao/FuncionarioDAO.php';
                         <input type="text" name="nome_resp" class="form-control" id="nome_resp" required>
                     </div> 
                     <div class="form-group col-md-6">
+                        <label for="inputData_nasc">Data de Nascimento:</label>
+                        <input type="date" name="data_nasc_hosp" class="form-control" id="Data_nasc_hosp" required>
+                    </div>
+                    <div class="form-group col-md-6">
                         <label for="inputRG">RG:</label>
                         <input type="text" name="rg_hosp" class="form-control" id="Rg_hosp" placeholder="00.000.000-0" required>
                     </div>

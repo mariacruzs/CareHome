@@ -6,7 +6,7 @@ const PORTA = "5432";
 const DBNAME = "Projeto_Care_Home";
 const USER = "postgres";
 const PASSWORD = "1234";
-// const PASSWORD = "1234";
+//const PASSWORD = "1234";
 
 try {
 
