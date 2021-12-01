@@ -14,19 +14,33 @@ if (isset($_POST['cadastrar_plano'])) {
         </script>";
         } else {
             echo "<script>
-        window.alert('Plano de Saúde não alterad')
+        window.alert('Plano de Saúde não alterado')
         window.location.href='../view/planosaude.php';
         </script>";
         }
     } else if (inserir_plano()) {
         echo "<script>
         window.alert('Plano de Saúde inserido com sucesso')
-        window.location.href='../view/home.php';
+        window.location.href='../view/planosaude.php';
         </script>";
     } else {
         echo "<script>
         window.alert('Plano de Saúde não inserido')
         window.location.href='../view/planosaude.php';
         </script>";
+    }
+}
+
+if (isset($_GET["id_plano"]) && !empty($_GET["id_plano"])) {
+    if (excluir_plano()) {
+        echo "<script>
+            window.alert('Plano de Saúde excluido com sucesso')
+            window.location.href='../view/planosaude.php';
+            </script>";
+    } else {
+        echo "<script>
+            window.alert('Plano de Saúde não excluido')
+            window.location.href='../view/planosaude.php';
+            </script>";
     }
 }

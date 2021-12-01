@@ -62,13 +62,12 @@ function excluir_plano()
 {
     //inicia as variáveis com os valores eperados para dados em branco
     $conexao = conexao();
-    $id_ps = $_POST['id_ps'];
-
-    //verifica se realmente o Nome (dado que não pode estar em branco) está preenchido
-    if (!empty($des_ps)) {
+    $id_ps = $_GET['id_plano'];
+    echo $id_ps;
+       
         try {
             //Cria o script de insert             
-            $sql = "DELETE FROM plano_saude  WHERE id_ps = ?";
+            $sql = "DELETE FROM plano_saude WHERE id_ps = ?";
             //Prepara para inserir
             $statement = $conexao->prepare($sql);
             $statement->bindParam(1, $id_ps);
@@ -82,7 +81,7 @@ function excluir_plano()
             return false;
         }
     }
-}
+
 
 //função padrão para consultar Pessoa, pode receber uma string com os campos (ex: id_pes as Nome) e os valores para o where
 function consulta_plano($campos = '*', $add = '')
@@ -93,4 +92,3 @@ function consulta_plano($campos = '*', $add = '')
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-
