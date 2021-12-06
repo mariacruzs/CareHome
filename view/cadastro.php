@@ -178,8 +178,9 @@ include_once '../dao/PlanoSaudeDAO.php';
                                 <label for="inputTipo_alerg">Se sim, a que?</label>
                                 <input type="text" name="tipo_alerg" class="form-control" id="Tipo_alerg">
                             </div>
+                            
                             <div class="form-group">
-                                <label for="inputTipo_PlanoSaude">Insira o Plano de Saúde?</label>
+                                <label for="inputTipo_PlanoSaude">Insira o Plano de Saúde:</label>
                                 <select id="id_ps" class="form-control">
                                     <?php
                                     $resultado = consulta_plano();
@@ -193,6 +194,23 @@ include_once '../dao/PlanoSaudeDAO.php';
                                     ?>
                                 </select>
                             </div>
+
+                            <div class="form-group">
+                                <label for="inputTipo_Hospede">Insira qual o responsável por esse hóspede:</label>
+                                <select id="id_resp" class="form-control">
+                                    <?php
+                                    $resultado = consulta_responsavel();
+                                    //   var_dump($resultado);
+                                    foreach ($resultado as $linha) {
+                                        ?>
+                                        <option value="<?= $linha['id_resp'] ?>" class="form-control" id="nome_resp" selected > <?= $linha['nome_resp'] ?> </option>
+                                        <?php
+                                        $i++;
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+
                             <div class="form-group">
                                 <input class="btn btn-secondary" type="submit" name="cadastrar_hospede" role="button" value="Cadastrar">
                             </div>

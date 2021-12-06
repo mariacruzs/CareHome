@@ -41,7 +41,8 @@ include_once '../dao/MedicamentosDAO.php';
         </nav>
 
         <div id="site">
-            <form method="POST" action="../controller/ResponsavelCTR.php">
+            
+            <form method="POST" action="../controller/MedicamentosCTR.php">
                 <h4 class="text-center">Cadastro de Medicamentos</h4>
                 <br>
                 <div class="form-row">
@@ -66,18 +67,35 @@ include_once '../dao/MedicamentosDAO.php';
                         <input type="text" name="data_inicio_med" class="form-control" id="data_inicio_med" placeholder="DD/MM/AAAA" required>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputBairro">Data de final:</label>
-                        <input type="text" name="data_fim_med" class="form-control" id="data_fim_med" placeholder="DD/MM/AAAA" required>
+                        <label for="inputCEP">Data final:</label>
+                        <input type="text" name="data_fim_med" class="form-control" id="datafim_med" placeholder="DD/MM/AAAA" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputRua">Observação:</label>
                         <input type="text" name="obs_med" class="form-control" id="obs_med" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="inputTipo_Medicamentos">Insira a qual hóspede essas informações pertencem:</label>
+                        <select id="id_hosp" class="form-control">
+                            <?php
+                            $resultado = consulta_medicamentos();
+                            //   var_dump($resultado);
+                            foreach ($resultado as $linha) {
+                                ?>
+                                <option value="<?= $linha['id_hosp'] ?>" class="form-control" id="nome_hosp" selected > <?= $linha['nome_hosp'] ?> </option>
+                                <?php
+                                $i++;
+                            }
+                            ?>
+                        </select>
+                    </div>
+
                     <button type="submit" class="btn btn-primary" name="cadastrar_medicamentos" id="cadastrar_medicamentos"> Cadastrar </button>
                 </div>
             </form>
         </div>
 
-        
+
     </body>
 </html>

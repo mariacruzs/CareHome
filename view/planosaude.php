@@ -33,7 +33,6 @@ include_once '../dao/PlanoSaudeDAO.php';
                             <a class="nav-link" href="cadastro.php"><i class="fas fa-user-alt"></i> Hóspede</a>
                             <a class="nav-link" href="responsavel.php"><i class="fas fa-user-shield"></i> Responsável</a>
                             <a class="nav-link" href="medicamentos.php"><i class="fas fa-capsules"></i> Medicamentos</a>
-                            <a class="nav-link" href="loginfuncionario.php"><i class="fas fa-user-md"></i> Funcionário</a>
                         </div>
                     </li>
                 </ul>
@@ -64,14 +63,14 @@ include_once '../dao/PlanoSaudeDAO.php';
             </div>
         </form>
 
-        <table>
+        <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>ID_PS</th>
-                    <th>DES_PS</th>
+                    <th>ID Plano de Saúde</th>
+                    <th>Descrição Plano de Saúde</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody>  
                 <?php
                 $resultado = consulta_plano();
                 //   var_dump($resultado);
@@ -81,23 +80,23 @@ include_once '../dao/PlanoSaudeDAO.php';
                         <td><?= $linha['id_ps'] ?></td>
                         <td><?= $linha['des_ps'] ?></td>
                         <td>
-                            <a href="home.php?id_plano=<?= $linha['id_ps'] ?>" class="btn btn-info">Medicar</a>
+                           <!-- <input href="home.php?id_plano=<?= $linha['id_ps'] ?>" class="btn chamadaBtn" style="margin-left: 30px; color:white; margin-right: 30px; margin-top: 15px;" type="submit" value="Medicar" /> -->
+                            <a href="home.php?id_plano=<?= $linha['id_ps'] ?>" class="">Medicar</a>
                         </td>
                         <td>
-                            <a href="planosaude.php?id_plano=<?= $linha['id_ps'] ?>" class="btn btn-warning">Alterar</a>
+                             <!--<input href="planosaude.php?id_plano=<?= $linha['id_ps'] ?>" class="btn chamadaBtn" style="margin-left: 30px; color:white; margin-right: 30px; margin-top: 15px;" type="submit" value="Alterar" />-->
+                           <a href="planosaude.php?id_plano=<?= $linha['id_ps'] ?>" class="">Alterar</a>
                         </td>
                         <td>
-                            <a href="../controller/PlanoSaudeCTR.php?id_plano=<?= $linha['id_ps'] ?>" class="btn btn-danger">Excluir</a>
+                                <!--<input href="../controller/PlanoSaudeCTR.php?id_plano=<?= $linha['id_ps'] ?>" class="btn chamadaBtn" style="margin-left: 30px; color:white; margin-right: 30px; margin-top: 15px;" type="submit" value="Excluir" />--> 
+                        <a href="../controller/PlanoSaudeCTR.php?id_plano=<?= $linha['id_ps'] ?>" class="">Excluir</a>
                         </td>
                     </tr>
                 <?php
                 }
                 ?>
-
             </tbody>
         </table>
-
-
     </div>
 
 </body>

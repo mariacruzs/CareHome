@@ -30,6 +30,7 @@ function inserir_plano()
         }
     }
 }
+
 function alterar_plano()
 {
     //inicia as variáveis com os valores eperados para dados em branco
@@ -58,6 +59,7 @@ function alterar_plano()
         }
     }
 }
+
 function excluir_plano()
 {
     //inicia as variáveis com os valores eperados para dados em branco
@@ -81,7 +83,6 @@ function excluir_plano()
             return false;
         }
     }
-
 
 //função padrão para consultar Pessoa, pode receber uma string com os campos (ex: id_pes as Nome) e os valores para o where
 function consulta_plano($campos = '*', $add = '')

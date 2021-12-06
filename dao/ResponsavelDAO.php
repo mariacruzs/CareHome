@@ -3,20 +3,19 @@
 //inclui a conexão com o banco se ainda não foi incluída
 include_once '../config/bdconfig.php';
 
-function inserir_responsavel()
-{
+function inserir_responsavel() {
     //inicia as variáveis com os valores eperados para dados em branco
     $conexao = conexao();
-    $nome = "";
-    $tel = "";
-    $cel = "";
-    $estado = "";
-    $cidade = "";
-    $bairro = "";
-    $cep = "";
-    $rua = "";
-    $numero_casa = "";
-    $id_hosp = "";
+    $nome_resp = "";
+    $tel_resp = "";
+    $cel_resp = "";
+    $est_resp = "";
+    $cid_resp = "";
+    $bairro_resp = "";
+    $cep_resp = "";
+    $rua_resp = "";
+    $numero_casa_resp = "";
+
 
     // if (isset($_POST['nome_hosp'])) {
     //     $nome = filter_input(INPUT_POST, 'nome_hosp', FILTER_SANITIZE_STRING);
@@ -45,34 +44,33 @@ function inserir_responsavel()
     // if (isset($_POST['num_casa_resp']) && !empty($_POST['num_casa_hosp'])) {
     //     $numero_casa = filter_input(INPUT_POST, 'num_casa_resp', FILTER_SANITIZE_NUMBER_FLOAT);
     // }
-    $nome = $_POST['nome_resp'];
-    $tel = $_POST['tel_resp'];
-    $cel = $_POST['cel_resp'];
-    $estado = $_POST['est_resp'];
-    $cidade = $_POST['cid_resp'];
-    $bairro = $_POST['bairro_resp'];
-    $cep = $_POST['cep_resp'];
-    $rua = $_POST['rua_resp'];
-    $numero_casa = $_POST['num_casa_resp'];
-    $id_hosp = '3';
+    $nome_resp = $_POST['nome_resp'];
+    $tel_resp = $_POST['tel_resp'];
+    $cel_resp = $_POST['cel_resp'];
+    $est_resp = $_POST['est_resp'];
+    $cid_resp = $_POST['cid_resp'];
+    $bairro_resp = $_POST['bairro_resp'];
+    $cep_resp = $_POST['cep_resp'];
+    $rua_resp = $_POST['rua_resp'];
+    $num_casa_resp = $_POST['num_casa_resp'];
+
 
     //verifica se realmente o Nome (dado que não pode estar em branco) está preenchido
-    if (!empty($nome)) {
+    if (!empty($nome_resp)) {
         try {
             //Cria o script de insert             
-            $sql = "INSERT INTO responsavel (nome_resp,tel_resp,cel_resp,est_resp,cid_resp,bairro_resp,cep_resp,rua_resp,num_casa_resp,id_hosp)VALUES (?,?,?,?,?,?,?,?,?,?);";
+            $sql = "INSERT INTO responsavel (nome_resp,tel_resp,cel_resp,est_resp,cid_resp,bairro_resp,cep_resp,rua_resp,num_casa_resp)VALUES (?,?,?,?,?,?,?,?,?);";
             //Prepara para inserir
             $statement = $conexao->prepare($sql);
-            $statement->bindParam(1, $nome);
-            $statement->bindParam(2, $tel);
-            $statement->bindParam(3, $cel);
-            $statement->bindParam(4, $estado);
-            $statement->bindParam(5, $cidade);
-            $statement->bindParam(6, $bairro);
-            $statement->bindParam(7, $cep);
-            $statement->bindParam(8, $rua);
-            $statement->bindParam(9, $numero_casa);
-            $statement->bindParam(10, $id_hosp);
+            $statement->bindParam(1, $nome_resp);
+            $statement->bindParam(2, $tel_resp);
+            $statement->bindParam(3, $cel_resp);
+            $statement->bindParam(4, $est_resp);
+            $statement->bindParam(5, $cid_resp);
+            $statement->bindParam(6, $bairro_resp);
+            $statement->bindParam(7, $cep_resp);
+            $statement->bindParam(8, $rua_resp);
+            $statement->bindParam(9, $num_casa_resp);
             $statement->execute();
             //Verifica a quantidade de linhas afetadas
             if ($statement->rowCount() > 0) {
@@ -85,9 +83,73 @@ function inserir_responsavel()
     }
 }
 
+function alterar_responsavel() {
+    //inicia as variáveis com os valores eperados para dados em branco
+    $conexao = conexao();
+    $id_resp = $_POST['id_resp'];
+    $nome_resp = $_POST['nome_resp'];
+    $tel_resp = $_POST['tel_resp'];
+    $cel_resp = $_POST['cel_resp'];
+    $est_resp = $_POST['est_resp'];
+    $cid_resp = $_POST['cid_resp'];
+    $bairro_resp = $_POST['bairro_resp'];
+    $cep_resp = $_POST['cep_resp'];
+    $rua_resp = $_POST['rua_resp'];
+    $num_casa_resp = $_POST['num_casa_resp'];
+
+    //verifica se realmente o Nome (dado que não pode estar em branco) está preenchido
+    if (!empty($nome_resp)) {
+        try {
+            //Cria o script de insert             
+            $sql = "UPDATE responsavel SET nome_resp  = ? WHERE id_resp = ?";
+            //Prepara para inserir
+            $statement = $conexao->prepare($sql);
+            $statement->bindParam(1, $nome_resp);
+            $statement->bindParam(2, $tel_resp);
+            $statement->bindParam(3, $cel_resp);
+            $statement->bindParam(4, $est_resp);
+            $statement->bindParam(5, $cid_resp);
+            $statement->bindParam(6, $bairro_resp);
+            $statement->bindParam(7, $cep_resp);
+            $statement->bindParam(8, $rua_resp);
+            $statement->bindParam(9, $num_casa_resp);
+            $statement->execute();
+            //Verifica a quantidade de linhas afetadas
+            if ($statement->rowCount() > 0) {
+                return true;
+            }
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+            return false;
+        }
+    }
+}
+
+function excluir_responsavel() {
+    //inicia as variáveis com os valores eperados para dados em branco
+    $conexao = conexao();
+    $id_resp = $_GET['id_resp'];
+    echo $id_resp;
+
+    try {
+        //Cria o script de insert             
+        $sql = "DELETE FROM responsavel WHERE id_resp = ?";
+        //Prepara para inserir
+        $statement = $conexao->prepare($sql);
+        $statement->bindParam(1, $id_resp);
+        $statement->execute();
+        //Verifica a quantidade de linhas afetadas
+        if ($statement->rowCount() > 0) {
+            return true;
+        }
+    } catch (Exception $ex) {
+        echo $ex->getMessage();
+        return false;
+    }
+}
+
 //função padrão para consultar Pessoa, pode receber uma string com os campos (ex: id_pes as Nome) e os valores para o where
-function consulta_responsavel($campos = '*', $add = '')
-{
+function consulta_responsavel($campos = '*', $add = '') {
     $sql = "select $campos from responsavel $add";
     $conexao = conexao();
     $stmt = $conexao->prepare($sql);

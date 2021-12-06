@@ -32,11 +32,23 @@ include_once '../dao/HospedeDAO.php';
                                 <a class="nav-link" href="cadastro.php"><i class="fas fa-user-alt"></i> Hóspede</a>
                                 <a class="nav-link" href="responsavel.php"><i class="fas fa-user-shield"></i> Responsável</a>
                                 <a class="nav-link" href="medicamentos.php"><i class="fas fa-capsules"></i> Medicamentos</a>
-                                <a class="nav-link" href="loginfuncionario.php"><i class="fas fa-user-md"></i> Funcionário</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li class='nav-item dropdown'>
+                            <a class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href=""><i class="fas fa-plus-circle"> </i> Consultas e Listagens</a>
+                            <div class="dropdown-menu" style="background-color:#001133; padding-right: 45px;" aria-labelledby="dropdownMenuLink">
+                                <a class="nav-link" href="listagem_hospede.php"><i class="fas fa-user-alt"></i> Hóspede</a>
+                                <a class="nav-link" href="listagem_responsavel.php"><i class="fas fa-user-shield"></i> Responsável</a>
+                                <a class="nav-link" href="listagem_medicamentos.php"><i class="fas fa-capsules"></i> Medicamentos</a>
+                                <a class="nav-link" href="listagem_funcionario.php"><i class="fas fa-user-md"></i> Funcionário</a>
                             </div>
                         </li>
                     </ul>
                     <a class="col-md-3" href="faleconosco.php"><i class="fas fa-question-circle"></i> Fale conosco</a>
+                    <a class="col-md-3" href="loginfuncionario.php"><i class="fas fa-user"></i> Entrar</a>
                 </div>
         </nav>
 

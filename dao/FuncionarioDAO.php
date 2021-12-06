@@ -16,7 +16,19 @@ function inserir_funcionario() {
     $rua = "";
     $numero_casa = "";
     $tel = "";
-    $senha_func = "";
+    $senha = "";
+    
+    $nome = $_POST['nome_func'];
+    $cpf = $_POST['cpf_func'];
+    $rg = $_POST['rg_func'];
+    $estado = $_POST['estado_func'];
+    $cidade = $_POST['cid_func'];
+    $bairro = $_POST['bairro_func'];
+    $cep = $_POST['cep_func'];
+    $rua = $_POST['rua_func'];
+    $numero_casa = $_POST['num_casa_func'];
+    $tel = $_POST['tel_func'];
+    $senha = $_POST['senha_func']; 
 
     //verifica se realmente o Nome (dado que não pode estar em branco) está preenchido
     if (!empty($nome)) {

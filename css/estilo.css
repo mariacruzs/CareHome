@@ -376,3 +376,9 @@ p {
     background-color: #04AA6D; /* Adicione uma cor verde ao link "ativo / atual" */
     color: white;
 }
+
+btn-planosaude {
+    margin-left: 30px; 
+    color:white; margin-right: 
+    30px; margin-top: 15px;
+}
