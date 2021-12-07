@@ -64,11 +64,11 @@ include_once '../dao/MedicamentosDAO.php';
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputCEP">Data de início:</label>
-                        <input type="text" name="data_inicio_med" class="form-control" id="data_inicio_med" placeholder="DD/MM/AAAA" required>
+                        <input type="date" name="data_inicio_med" class="form-control" id="data_inicio_med" placeholder="DD/MM/AAAA" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputCEP">Data final:</label>
-                        <input type="text" name="data_fim_med" class="form-control" id="datafim_med" placeholder="DD/MM/AAAA" required>
+                        <input type="date" name="data_fim_med" class="form-control" id="datafim_med" placeholder="DD/MM/AAAA" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputRua">Observação:</label>

@@ -52,23 +52,7 @@ include_once '../dao/ResponsavelDAO.php';
         </nav>
 
         <div id="site">
-            <?php
-            $id_resp = NULL;
-            $nome_resp = NULL;
-            $tel_resp = NULL;
-            $cel_resp = NULL;
-            $est_resp = NULL;
-            $cid_resp = NULL;
-            $bairro_resp = NULL;
-            $cep_resp = NULL;
-            $rua_resp = NULL;
-            $num_casa_resp = NULL;
-            if (isset($_GET["id_resp"])) {
-                $id_resp = filter_input(INPUT_GET, 'id_resp', FILTER_SANITIZE_NUMBER_INT);
-                $resultado1 = consulta_responsavel("nome_resp", " where id_resp = " . $id_resp);
-                $nome_resp = $resultado1[0]["nome_resp"];
-            }
-            ?>
+           
 
            
                 <table class="table table-bordered">

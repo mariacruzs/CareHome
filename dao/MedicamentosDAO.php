@@ -94,7 +94,7 @@ function alterar_medicamento() {
 function excluir_medicamento() {
     //inicia as variáveis com os valores eperados para dados em branco
     $conexao = conexao();
-    $id_ps = $_GET['id_med'];
+    $id_med = $_GET['id_med'];
     echo $id_med;
 
     try {

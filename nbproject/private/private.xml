@@ -12,12 +12,13 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/CareHome/view/home.php</file>
             <file>file:/C:/xampp/htdocs/CareHome/dao/MedicamentosDAO.php</file>
             <file>file:/C:/xampp/htdocs/CareHome/dao/ResponsavelDAO.php</file>
-            <file>file:/C:/xampp/htdocs/CareHome/view/planosaude.php</file>
-            <file>file:/C:/xampp/htdocs/CareHome/dao/PlanoSaudeDAO.php</file>
-            <file>file:/C:/xampp/htdocs/CareHome/view/listagem_responsavel.php</file>
-            <file>file:/C:/xampp/htdocs/CareHome/view/responsavel.php</file>
+            <file>file:/C:/xampp/htdocs/CareHome/dao/HospedeDAO.php</file>
+            <file>file:/C:/xampp/htdocs/CareHome/view/medicamentos.php</file>
+            <file>file:/C:/xampp/htdocs/CareHome/controller/MedicamentosCTR.php</file>
+            <file>file:/C:/xampp/htdocs/CareHome/view/cadastro.php</file>
         </group>
     </open-files>
 </project-private>
