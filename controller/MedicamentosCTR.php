@@ -25,6 +25,7 @@ if (isset($_POST['cadastrar_medicamento'])) {
     } else {
         echo "<script>
         window.alert('Medicamento não inserido')
+        window.location.href='../view/medicamentos.php';
         </script>";
     }
 }
